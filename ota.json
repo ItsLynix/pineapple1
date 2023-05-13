@@ -1,11 +1,11 @@
 {
-  "version": "vNULL",
-  "date": "NULL",
+  "version": "v2023.05.13",
+  "date": "1683982094",
   "variants": [
     {
       "name": "lmodroid_arm64_bvN",
-      "size": "NULL",
-      "url": "NULL"
+      "size": "980074496",
+      "url": "https://github.com/ItsLynix/pineapple1/releases/download/LMOdroid/LMODroid_arm64_bvN.img.xz"
     }
   ]
 }
