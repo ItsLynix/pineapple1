@@ -1,4 +1,4 @@
-From 0e03861ed56e34e1939568663de2417e5b0472d5 Mon Sep 17 00:00:00 2001
+From cb475653cac6c897a1a3595f66e1a95aa1e82984 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 23 Feb 2022 17:37:47 -0500
 Subject: [PATCH 01/16] Let system override ro.apex.updatable
@@ -13,10 +13,10 @@ So, ignore the override policy for this prop
  1 file changed, 6 insertions(+), 2 deletions(-)
 
 diff --git a/init/property_service.cpp b/init/property_service.cpp
-index 26341b196..45b04151e 100644
+index 7fd64b3..af7abe6 100644
 --- a/init/property_service.cpp
 +++ b/init/property_service.cpp
-@@ -726,8 +726,12 @@ static void LoadProperties(char* data, const char* filter, const char* filename,
+@@ -727,8 +727,12 @@ static void LoadProperties(char* data, const char* filter, const char* filename,
                  } else if (it->second != value) {
                      LOG(WARNING) << "Overriding previous property '" << key << "':'" << it->second
                                   << "' with new value '" << value << "'";

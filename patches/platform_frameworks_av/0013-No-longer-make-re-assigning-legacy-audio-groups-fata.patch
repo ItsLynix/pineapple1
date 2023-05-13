@@ -1,4 +1,4 @@
-From 176f0f43c83ae9c0d13a70b7bf420ea8d9477c8b Mon Sep 17 00:00:00 2001
+From 6cf131ad96f74e985e5242d589c4ebb8b9f4eeea Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 12 Sep 2020 12:32:50 +0200
 Subject: [PATCH 13/28] No longer make re-assigning legacy audio groups fatal.
@@ -11,7 +11,7 @@ Change-Id: I794fe22d63a8af705be4f5f09b9879ecaab3eae5
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/services/audiopolicy/engine/common/src/EngineBase.cpp b/services/audiopolicy/engine/common/src/EngineBase.cpp
-index 99507eee5d..e31cc21b17 100644
+index 99507ee..e31cc21 100644
 --- a/services/audiopolicy/engine/common/src/EngineBase.cpp
 +++ b/services/audiopolicy/engine/common/src/EngineBase.cpp
 @@ -222,9 +222,9 @@ engineConfig::ParsingResult EngineBase::loadAudioPolicyEngineConfig()

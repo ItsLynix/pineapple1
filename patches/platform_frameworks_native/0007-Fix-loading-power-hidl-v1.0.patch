@@ -1,4 +1,4 @@
-From 9af1650c3c984866a3b9a96aeea86b31e85c1823 Mon Sep 17 00:00:00 2001
+From 435c02e1af06ca084f54742bf52249363d3e99d6 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 12 Jan 2022 04:07:34 -0500
 Subject: [PATCH 07/11] Fix loading power hidl v1.0
@@ -9,7 +9,7 @@ Change-Id: Ife20a98d2a11c79c7b42f359f30c28e2dede1f25
  1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/services/powermanager/PowerHalLoader.cpp b/services/powermanager/PowerHalLoader.cpp
-index 9b20e67f7a..cd7f2312e2 100644
+index 9b20e67..cd7f231 100644
 --- a/services/powermanager/PowerHalLoader.cpp
 +++ b/services/powermanager/PowerHalLoader.cpp
 @@ -93,10 +93,11 @@ sp<vendor::samsung::hardware::miscpower::V2_0::ISehMiscPower> PowerHalLoader::lo

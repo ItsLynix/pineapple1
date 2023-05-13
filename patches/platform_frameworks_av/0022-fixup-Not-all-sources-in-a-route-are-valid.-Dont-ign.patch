@@ -1,4 +1,4 @@
-From 32d22771dc17650c337f75c86bfb84a042aca8be Mon Sep 17 00:00:00 2001
+From 5b56d9cdc2c6cba961af44240dcaecebff30097a Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sat, 12 Mar 2022 18:07:43 -0500
 Subject: [PATCH 22/28] fixup! Not all sources in a route are valid. Dont
@@ -9,7 +9,7 @@ Subject: [PATCH 22/28] fixup! Not all sources in a route are valid. Dont
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp b/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
-index 9d3d9fd169..95d2463230 100644
+index 9d3d9fd..95d2463 100644
 --- a/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
 +++ b/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
 @@ -667,7 +667,7 @@ std::variant<status_t, RouteTraits::Element> PolicySerializer::deserialize<Route

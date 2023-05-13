@@ -1,4 +1,4 @@
-From cf1473867261b0a32d48bffe61728bc2f324787d Mon Sep 17 00:00:00 2001
+From 8b89a3766885e84eb0f286b4a11901350d055f41 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 9 Nov 2022 17:10:52 -0500
 Subject: [PATCH 26/28] Fix audio hal 2.0 support. Fixup of Revert "Remove
@@ -11,7 +11,7 @@ Subject: [PATCH 26/28] Fix audio hal 2.0 support. Fixup of Revert "Remove
  3 files changed, 19 insertions(+)
 
 diff --git a/media/libaudiohal/impl/Android.bp b/media/libaudiohal/impl/Android.bp
-index 7bba88ca0a..e53289c935 100644
+index 7bba88c..e53289c 100644
 --- a/media/libaudiohal/impl/Android.bp
 +++ b/media/libaudiohal/impl/Android.bp
 @@ -71,6 +71,11 @@ cc_defaults {
@@ -27,7 +27,7 @@ index 7bba88ca0a..e53289c935 100644
          "android.hardware.audio.common@2.0",
          "android.hardware.audio.common@2.0-util",
 diff --git a/media/libaudiohal/impl/DeviceHalHidl.cpp b/media/libaudiohal/impl/DeviceHalHidl.cpp
-index 0cdf621c7a..1dffa87c90 100644
+index 0cdf621..1dffa87 100644
 --- a/media/libaudiohal/impl/DeviceHalHidl.cpp
 +++ b/media/libaudiohal/impl/DeviceHalHidl.cpp
 @@ -516,6 +516,7 @@ status_t DeviceHalHidl::removeDeviceEffect(
@@ -67,7 +67,7 @@ index 0cdf621c7a..1dffa87c90 100644
  
  status_t DeviceHalHidl::dump(int fd, const Vector<String16>& args) {
 diff --git a/media/libaudiohal/impl/DevicesFactoryHalHidl.cpp b/media/libaudiohal/impl/DevicesFactoryHalHidl.cpp
-index 4069a6bdbd..e9d2af5d2c 100644
+index 4069a6b..e9d2af5 100644
 --- a/media/libaudiohal/impl/DevicesFactoryHalHidl.cpp
 +++ b/media/libaudiohal/impl/DevicesFactoryHalHidl.cpp
 @@ -114,6 +114,7 @@ status_t DevicesFactoryHalHidl::openDevice(const char *name, sp<DeviceHalInterfa

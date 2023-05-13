@@ -1,4 +1,4 @@
-From 4fad0abee48c619dcbde553b75d2304867e4fed3 Mon Sep 17 00:00:00 2001
+From 5844dab7d2e83c181fee5b7fc156aad867eab734 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Fri, 1 Nov 2019 18:22:13 +0100
 Subject: [PATCH 09/16] Ugly but secure: Set /dev/uinput as 0666 to fix
@@ -15,7 +15,7 @@ Change-Id: Id374e781957927d5604cb96c7a39b3fb28b3a6c5
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/rootdir/ueventd.rc b/rootdir/ueventd.rc
-index 4ec59afe9..c9cd629b3 100644
+index 4ec59af..c9cd629 100644
 --- a/rootdir/ueventd.rc
 +++ b/rootdir/ueventd.rc
 @@ -54,7 +54,7 @@ subsystem dma_heap

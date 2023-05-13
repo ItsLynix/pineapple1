@@ -1,4 +1,4 @@
-From c5ea2d22dc41e44a0d18c1d9f334ca24a4888b01 Mon Sep 17 00:00:00 2001
+From 0304056f86430db8317aa0654e652c21e1dd0bda Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 14 Aug 2018 19:33:03 +0200
 Subject: [PATCH 07/16] Detect allowed sdcard options based on vndk
@@ -11,7 +11,7 @@ Change-Id: I632e485f9b2a09a46d4a1fde2ea15217f8d92eff
  1 file changed, 5 insertions(+), 3 deletions(-)
 
 diff --git a/sdcard/sdcard.cpp b/sdcard/sdcard.cpp
-index 622de5b7a..e580190e9 100644
+index 622de5b..e580190 100644
 --- a/sdcard/sdcard.cpp
 +++ b/sdcard/sdcard.cpp
 @@ -32,6 +32,7 @@

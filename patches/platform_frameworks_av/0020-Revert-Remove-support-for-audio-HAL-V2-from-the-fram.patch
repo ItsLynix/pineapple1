@@ -1,4 +1,4 @@
-From 846972ab14e1977f3a8a90b95d731a6d4b799f67 Mon Sep 17 00:00:00 2001
+From d553f7b2ead3a010fc63eb24deceda4c7d117af4 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Mon, 11 Oct 2021 16:10:42 -0400
 Subject: [PATCH 20/28] Revert "Remove support for audio HAL V2 from the
@@ -16,7 +16,7 @@ Change-Id: Icfd638a91b22ffa6d2cd6d19a624e699a85a850a
  3 files changed, 22 insertions(+), 2 deletions(-)
 
 diff --git a/media/libaudiohal/Android.bp b/media/libaudiohal/Android.bp
-index 5f63e8de04..aa1d825d2f 100644
+index 5f63e8d..aa1d825 100644
 --- a/media/libaudiohal/Android.bp
 +++ b/media/libaudiohal/Android.bp
 @@ -23,6 +23,7 @@ cc_library_shared {
@@ -28,7 +28,7 @@ index 5f63e8de04..aa1d825d2f 100644
          "libaudiohal@5.0",
          "libaudiohal@6.0",
 diff --git a/media/libaudiohal/FactoryHalHidl.cpp b/media/libaudiohal/FactoryHalHidl.cpp
-index 590fec5443..46b6bd757a 100644
+index 590fec5..46b6bd7 100644
 --- a/media/libaudiohal/FactoryHalHidl.cpp
 +++ b/media/libaudiohal/FactoryHalHidl.cpp
 @@ -36,12 +36,13 @@ namespace {
@@ -48,7 +48,7 @@ index 590fec5443..46b6bd757a 100644
  
  bool createHalService(const std::string& version, const std::string& interface,
 diff --git a/media/libaudiohal/impl/Android.bp b/media/libaudiohal/impl/Android.bp
-index d30883a95c..7bba88ca0a 100644
+index d30883a..7bba88c 100644
 --- a/media/libaudiohal/impl/Android.bp
 +++ b/media/libaudiohal/impl/Android.bp
 @@ -68,6 +68,24 @@ cc_defaults {

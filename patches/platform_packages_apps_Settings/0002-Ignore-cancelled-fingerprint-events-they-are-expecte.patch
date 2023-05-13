@@ -1,4 +1,4 @@
-From 870e9080c2fff774590577251d2e8fb0ccadcdd5 Mon Sep 17 00:00:00 2001
+From 410f61e059a71520cf6093bc3000aae5844f885c Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Mon, 2 May 2022 17:44:28 -0400
 Subject: [PATCH 2/2] Ignore cancelled fingerprint events, they are expected,
@@ -10,7 +10,7 @@ Subject: [PATCH 2/2] Ignore cancelled fingerprint events, they are expected,
  2 files changed, 5 insertions(+), 1 deletion(-)
 
 diff --git a/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling.java b/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling.java
-index 2eadc33c85..720c22b316 100644
+index 22bf7a2..5f624bb 100644
 --- a/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling.java
 +++ b/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling.java
 @@ -757,6 +757,9 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
@@ -23,7 +23,7 @@ index 2eadc33c85..720c22b316 100644
          onCancelEnrollment(errMsgId);
      }
  
-@@ -1105,4 +1108,4 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
+@@ -1114,4 +1117,4 @@ public class FingerprintEnrollEnrolling extends BiometricsEnrollEnrolling {
              return SettingsEnums.DIALOG_FINGERPRINT_ICON_TOUCH;
          }
      }
@@ -31,10 +31,10 @@ index 2eadc33c85..720c22b316 100644
 \ No newline at end of file
 +}
 diff --git a/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollFindSensor.java b/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollFindSensor.java
-index 89bda20cd7..93c3e6186c 100644
+index a346431..73ec2c0 100644
 --- a/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollFindSensor.java
 +++ b/src/com/android/settings/biometrics/fingerprint/FingerprintEnrollFindSensor.java
-@@ -326,6 +326,7 @@ public class FingerprintEnrollFindSensor extends BiometricEnrollBase implements
+@@ -341,6 +341,7 @@ public class FingerprintEnrollFindSensor extends BiometricEnrollBase implements
  
      @Override
      public void onEnrollmentError(int errMsgId, CharSequence errString) {

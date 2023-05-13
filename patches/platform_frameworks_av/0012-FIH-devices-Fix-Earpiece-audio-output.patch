@@ -1,4 +1,4 @@
-From 7f1d06c0d08809a7ca529da7b50f4d2e78604eaf Mon Sep 17 00:00:00 2001
+From ec3d7429697b4b781baf431e1a590dd2b314e256 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 24 Apr 2018 00:14:28 +0200
 Subject: [PATCH 12/28] FIH devices: Fix "Earpiece" audio output
@@ -16,7 +16,7 @@ Change-Id: I4a88ba6d34d0fcd346eeea2ca903772f0271040a
  1 file changed, 24 insertions(+), 3 deletions(-)
 
 diff --git a/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp b/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
-index 45ee70ab6e..2bf5705512 100644
+index 45ee70a..2bf5705 100644
 --- a/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
 +++ b/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
 @@ -416,23 +416,32 @@ std::variant<status_t, AudioGainTraits::Element> PolicySerializer::deserialize<A
